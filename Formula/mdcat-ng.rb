@@ -1,22 +1,33 @@
 class MdcatNg < Formula
   desc "Cat for markdown: show markdown documents in terminals"
   homepage "https://github.com/pawelb0/mdcat-ng"
-  url "https://github.com/pawelb0/mdcat-ng/archive/refs/tags/mdcat-ng-0.2.0.tar.gz"
-  sha256 "2ecc1d914368f9b0f1c61d01ff628d18f60dbc1fc0092488cee90f14364624ae"
+  version "0.2.1"
   license "MPL-2.0"
-  head "https://github.com/pawelb0/mdcat-ng.git", branch: "main"
 
-  depends_on "rust" => :build
-  uses_from_macos "curl"
+  on_macos do
+    on_arm do
+      url "https://github.com/pawelb0/mdcat-ng/releases/download/mdcat-ng-#{version}/mdcat-ng-#{version}-aarch64-apple-darwin.tar.gz"
+      sha256 "d8fe481f148c803f95550528e3b8f9e38b64146a3edc1b6a29d3374397228940"
+    end
+    on_intel do
+      url "https://github.com/pawelb0/mdcat-ng/releases/download/mdcat-ng-#{version}/mdcat-ng-#{version}-x86_64-apple-darwin.tar.gz"
+      sha256 "eef9dbaa347dd4b89b5b34fa9f91896f48eb1191274d2f855f349913b1a4e371"
+    end
+  end
+
+  on_linux do
+    on_intel do
+      url "https://github.com/pawelb0/mdcat-ng/releases/download/mdcat-ng-#{version}/mdcat-ng-#{version}-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "2758519044ea937d1637c425e70e219a5fe865dcda078205f7d3e946cdd306bf"
+    end
+  end
 
   def install
-    system "cargo", "install", *std_cargo_args(path: ".")
-    generate_completions_from_executable(bin/"mdcat", "--completions", shells: [:bash, :zsh, :fish])
-    generate_completions_from_executable(bin/"mdless", "--completions", shells: [:bash, :zsh, :fish])
+    bin.install "mdcat", "mdless"
+    doc.install "README.md", "CHANGELOG.md"
   end
 
   test do
-    output = pipe_output("#{bin}/mdcat", "# Hello\n")
-    assert_match "Hello", output
+    assert_match "Hello", pipe_output("#{bin}/mdcat", "# Hello\n")
   end
 end
