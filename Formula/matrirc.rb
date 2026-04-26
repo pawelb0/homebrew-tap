@@ -1,15 +1,30 @@
 class Matrirc < Formula
   desc "Local IRC server backed by Matrix"
   homepage "https://github.com/pawelb0/matrirc"
-  url "https://github.com/pawelb0/matrirc/archive/refs/tags/v0.2.5.tar.gz"
-  sha256 "fd13d92cde3fa1a73ff68b7b509966072a3f5226776083e16426bf2c232c1725"
+  version "0.2.6"
   license "GPL-3.0-or-later"
   head "https://github.com/pawelb0/matrirc.git", branch: "main"
 
-  depends_on "rust" => :build
+  on_macos do
+    on_arm do
+      url "https://github.com/pawelb0/matrirc/releases/download/v#{version}/matrirc-0.2.5-aarch64-apple-darwin.tar.gz"
+      sha256 "c8434d8d0599c02693b227bb6ba2e0295f54d3d4d68e12eb8dc7a7869defc18c"
+    end
+    on_intel do
+      url "https://github.com/pawelb0/matrirc/releases/download/v#{version}/matrirc-0.2.5-x86_64-apple-darwin.tar.gz"
+      sha256 "7ac081da89c60917d0acc100d2803a368513ea3bf77194500f0200277589db51"
+    end
+  end
+
+  on_linux do
+    on_intel do
+      url "https://github.com/pawelb0/matrirc/releases/download/v#{version}/matrirc-0.2.5-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "cdba9d8506ceacd13ca2c736e8f08007c45e6b941ea317b9ab6a15a4bb48bf96"
+    end
+  end
 
   def install
-    system "cargo", "install", *std_cargo_args(path: ".")
+    bin.install "matrirc"
   end
 
   test do
