@@ -1,25 +1,25 @@
 class Mdqy < Formula
   desc "jq for markdown: query and transform Markdown with a hybrid selector and jq DSL"
   homepage "https://github.com/pawelb0/mdqy"
-  version "0.1.2"
+  version "0.1.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/pawelb0/mdqy/releases/download/v0.1.2/mdqy-aarch64-apple-darwin.tar.xz"
-      sha256 "b3e89156bb85ff572bb7340582077c5215d54d2fec09e1031022ff536d651cdf"
+      url "https://github.com/pawelb0/mdqy/releases/download/v0.1.3/mdqy-aarch64-apple-darwin.tar.xz"
+      sha256 "dde653464aef7e1c72e75727de8c4478807e310649a68909d96b50d41f5630b8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pawelb0/mdqy/releases/download/v0.1.2/mdqy-x86_64-apple-darwin.tar.xz"
-      sha256 "f084393809836edf402a7dc2fbdc590b658b20aa0860265067081c57fc3c419c"
+      url "https://github.com/pawelb0/mdqy/releases/download/v0.1.3/mdqy-x86_64-apple-darwin.tar.xz"
+      sha256 "154ae88b00e9b8c9b017d1894efed739258fd482a50480c578fa54412e28227f"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/pawelb0/mdqy/releases/download/v0.1.2/mdqy-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "a3a9963a0a961a9628c0965f1d3f313c4fe2471f597a66dc1d665924c69fd0c2"
+      url "https://github.com/pawelb0/mdqy/releases/download/v0.1.3/mdqy-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "d6b995292d15ebbc2828e4c2eeeddb364ccac8e30ef4c8f58357352cb22c67ae"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pawelb0/mdqy/releases/download/v0.1.2/mdqy-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "8e44259b70a104ef473d9fe66428de66d659412ec15fc733e91324c162764204"
+      url "https://github.com/pawelb0/mdqy/releases/download/v0.1.3/mdqy-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "519aa5c11c7dce31acfbfb4aba8161e50da3b5fdc05e1655ac4efe5ae6a04be1"
     end
   end
   license "MPL-2.0"
