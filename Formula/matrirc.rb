@@ -1,25 +1,25 @@
 class Matrirc < Formula
   desc "Local IRC server backed by Matrix"
   homepage "https://github.com/pawelb0/matrirc"
-  version "0.2.6"
+  version "0.2.7"
   license "GPL-3.0-or-later"
   head "https://github.com/pawelb0/matrirc.git", branch: "main"
 
   on_macos do
     on_arm do
-      url "https://github.com/pawelb0/matrirc/releases/download/v#{version}/matrirc-0.2.5-aarch64-apple-darwin.tar.gz"
-      sha256 "c8434d8d0599c02693b227bb6ba2e0295f54d3d4d68e12eb8dc7a7869defc18c"
+      url "https://github.com/pawelb0/matrirc/releases/download/v#{version}/matrirc-#{version}-aarch64-apple-darwin.tar.gz"
+      sha256 "ecacbc695eb24110b427110abe09465207c4d41911e6490331139f149af23621"
     end
     on_intel do
-      url "https://github.com/pawelb0/matrirc/releases/download/v#{version}/matrirc-0.2.5-x86_64-apple-darwin.tar.gz"
-      sha256 "7ac081da89c60917d0acc100d2803a368513ea3bf77194500f0200277589db51"
+      url "https://github.com/pawelb0/matrirc/releases/download/v#{version}/matrirc-#{version}-x86_64-apple-darwin.tar.gz"
+      sha256 "05d07924cd67c30afeb57fc68f0e7793d807fa9a3cf81871f47faedb0f2b5e06"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/pawelb0/matrirc/releases/download/v#{version}/matrirc-0.2.5-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "cdba9d8506ceacd13ca2c736e8f08007c45e6b941ea317b9ab6a15a4bb48bf96"
+      url "https://github.com/pawelb0/matrirc/releases/download/v#{version}/matrirc-#{version}-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "bd7c69a64e9ca4ee4f122fc0eedfb856f9c3357a5a111b311dd602aa41c13f12"
     end
   end
 
