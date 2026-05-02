@@ -1,24 +1,24 @@
 class MdcatNg < Formula
   desc "Cat for markdown: show markdown documents in terminals"
   homepage "https://github.com/pawelb0/mdcat-ng"
-  version "0.2.2"
+  version "0.2.3"
   license "MPL-2.0"
 
   on_macos do
     on_arm do
       url "https://github.com/pawelb0/mdcat-ng/releases/download/mdcat-ng-#{version}/mdcat-ng-#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "4b34035db0f82a7c8dc47d48e724cf7886c7cfa38af6982c15d62576aca343f1"
+      sha256 "26afcf7145174186b2ee28dbe5574faf7d35a3d64f0c797d830f6475bcc4760b"
     end
     on_intel do
       url "https://github.com/pawelb0/mdcat-ng/releases/download/mdcat-ng-#{version}/mdcat-ng-#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "73c2832899cb14bd8c535c416e552c758451ae98ca5cca9f3e1c78813a7c2298"
+      sha256 "8a982d7719990f852ef0fc3cb097e21d795841b119eec5b2d0b1a3fefd9ed985"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/pawelb0/mdcat-ng/releases/download/mdcat-ng-#{version}/mdcat-ng-#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "05d73acda508336301ab02fd9943dd45a1c808ada468fb039de1c56c8b9eef5d"
+      sha256 "31c708d5f231b2e94f7dd938a672f3248df9ea99efaab2cf1456073301e5d029"
     end
   end
 
