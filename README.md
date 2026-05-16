@@ -12,3 +12,4 @@ brew install mdcat-ng
 ## Formulae
 
 - `mdcat-ng` — <https://github.com/pawelb0/mdcat-ng>
+- `mcpal` — <https://github.com/pawelb0/mcpal>
