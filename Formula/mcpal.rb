@@ -1,25 +1,25 @@
 class Mcpal < Formula
   desc "mcpal — CLI for the Model Context Protocol."
   homepage "https://pawelb0.github.io/mcpal/"
-  version "0.1.1"
+  version "0.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/pawelb0/mcpal/releases/download/v0.1.1/mcpal-aarch64-apple-darwin.tar.xz"
-      sha256 "7b0964190ece02669265d041b91f7f065502a057eafcc03590ee0dfd189d441a"
+      url "https://github.com/pawelb0/mcpal/releases/download/v0.3.0/mcpal-aarch64-apple-darwin.tar.xz"
+      sha256 "42deea2985987057458f1b270fb02cb620686496325b4a20a6a8c8d07e9d0a05"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pawelb0/mcpal/releases/download/v0.1.1/mcpal-x86_64-apple-darwin.tar.xz"
-      sha256 "06a9cf5d1e2c7e8b68a0598c5ba1bfd77120bc5708c7628ff4cd2f715e045bc0"
+      url "https://github.com/pawelb0/mcpal/releases/download/v0.3.0/mcpal-x86_64-apple-darwin.tar.xz"
+      sha256 "d7e27c83f4dc1b680ebe31cbb7984ad9152a70d4d7aa1427edd574fa3bb44d62"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/pawelb0/mcpal/releases/download/v0.1.1/mcpal-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "b2509b7bfc77d4c13eb6dac809aed0d9aad8fa9fc9aefe8ad7663cc91d2d3b63"
+      url "https://github.com/pawelb0/mcpal/releases/download/v0.3.0/mcpal-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "ee903ccafa48750242156b9cdca745cbf13048a3e666a4a478f984c6d27776d0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pawelb0/mcpal/releases/download/v0.1.1/mcpal-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "3eea697255921ce49044326a9a5dfe7bff153f3911effe1e10d119f99c248137"
+      url "https://github.com/pawelb0/mcpal/releases/download/v0.3.0/mcpal-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "5fa783d684007e451b8995276b82a86d39360f0b5b2d5ffc84f2da28259715b5"
     end
   end
   license "MIT"
