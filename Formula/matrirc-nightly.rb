@@ -1,7 +1,7 @@
 class MatrircNightly < Formula
   desc "Local IRC server that bridges to a Matrix homeserver (nightly)"
   homepage "https://github.com/pawelb0/matrirc"
-  version "0.3.0-nightly.20260718161733.f3df588"
+  version "0.3.0-nightly.20260911165359.b20829b"
   license "GPL-3.0-or-later"
 
   # Not linked by default: stable matrirc owns bin/matrirc.
@@ -11,18 +11,18 @@ class MatrircNightly < Formula
   on_macos do
     on_arm do
       url "https://github.com/pawelb0/matrirc/releases/download/nightly/matrirc-aarch64-apple-darwin.tar.xz"
-      sha256 "b891d6576629bbb1adf164d0e6f0b765e774b5ebc19473b46e560e25820be823"
+      sha256 "f36afaf4401c26732048a462ba481810f073e8f02023dd2c40c8718f66fc529e"
     end
     on_intel do
       url "https://github.com/pawelb0/matrirc/releases/download/nightly/matrirc-x86_64-apple-darwin.tar.xz"
-      sha256 "4956441429afa70f8a08e96d0c3df98ee379864430ffe3d0f7fb248cb19fce77"
+      sha256 "35daf328acfd079737a75aa83840580ddaaa8017e36265f711c3de60c07431ca"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/pawelb0/matrirc/releases/download/nightly/matrirc-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "cbcf0ade8052a97d0c9aebd2a31a278a35f79891f977ea05aa45e57b5f8d91d4"
+      sha256 "572b02e86a4da97db71ea1d221a15c92a0b1e90e186f8d2d78813b9909bf51b1"
     end
   end
 
